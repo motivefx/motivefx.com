@@ -151,8 +151,8 @@ h2{ font-size:clamp(30px,4.4vw,46px); letter-spacing:-.03em; line-height:1.08; f
 
 /* studio band */
 .studio{ background:linear-gradient(180deg, rgba(60,120,255,.06), transparent); border-top:1px solid rgba(255,255,255,.06); border-bottom:1px solid rgba(255,255,255,.06) }
-.studio h2{max-width:760px;margin:0 auto}
-.studio h2 .accent{ background:linear-gradient(90deg,#fff,var(--yellow)); -webkit-background-clip:text; background-clip:text; color:transparent }
+.studio h2{max-width:760px;margin:0 auto;text-wrap:balance}
+.studio h2 .accent{ color:var(--yellow); -webkit-text-fill-color:var(--yellow) }
 .studio .lede{max-width:620px}
 
 /* work with us */
