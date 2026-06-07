@@ -261,9 +261,6 @@
             }
 
             function showThankYou() {
-                /* Scroll contact section into view */
-                contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-
                 /* Crossfade headline to "Thank You" */
                 gsap.to(headline, {
                     opacity: 0, duration: 0.3,
@@ -283,11 +280,14 @@
                 subtext.style.display = 'none';
                 form.parentNode.insertBefore(ty, form);
                 form.remove();
+                contactSection.style.minHeight = '';   // release the locked height so it shrinks to the thank-you
 
                 gsap.fromTo(ty,
                     { opacity: 0, y: 25 },
                     { opacity: 1, y: 0, duration: 0.7, ease: 'power2.out', delay: 0.15 }
                 );
+                /* center the thank-you in the viewport once layout settles */
+                requestAnimationFrame(() => ty.scrollIntoView({ behavior: 'smooth', block: 'center' }));
             }
         });
     </script>
