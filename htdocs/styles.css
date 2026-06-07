@@ -122,6 +122,10 @@ h1 .y{color:var(--yellow)}
 .ssmenu .sep{height:1px;background:rgba(255,255,255,.08);margin:5px 4px}
 .ssmenu .row.buy{color:var(--yellow)}
 
+/* hero screenshot */
+.shot{ margin:56px auto 0; max-width:660px }
+.shot img{ display:block; width:100%; height:auto; filter:drop-shadow(0 22px 48px rgba(0,0,0,.55)) }
+
 /* sections */
 section.band{padding:108px 0}
 .center{text-align:center}
