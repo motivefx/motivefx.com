@@ -175,7 +175,7 @@
                     '<div class="sending-progress-track">' +
                         '<div class="sending-progress-bar"></div>' +
                     '</div>';
-                contactSection.insertBefore(sending, form);
+                form.parentNode.insertBefore(sending, form);
 
                 const statusEl = sending.querySelector('.sending-status');
                 const barEl = sending.querySelector('.sending-progress-bar');
@@ -281,7 +281,7 @@
                     '<p class="thank-you-subtext">We’ll respond within one business day.</p>';
 
                 subtext.style.display = 'none';
-                contactSection.insertBefore(ty, form);
+                form.parentNode.insertBefore(ty, form);
                 form.remove();
 
                 gsap.fromTo(ty,
